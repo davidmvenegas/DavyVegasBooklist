@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap');
+
+/* ALL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Stick no Bills';
+    font-weight: 400;
+    background-color: #333;
+}
+
+html {
+    font-size: 62.5%;
+}
+/* ALL */
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 12rem;
+    background-color: #151515;
+    position: fixed;
+    top: -12rem;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: .15rem .15rem .15rem #222;
+    transition: top .4s;
+    overflow: hidden;
+}
+
+.navbar.change {
+    top: 0;
+    transition: top .4s .2s;
+}
+
+.navbar-link {
+    background-color: #151515;
+    color: #aaa;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: color 0.3s, opacity .2s;
+    z-index: 110;
+}
+
+.change .navbar-link {
+    opacity: 1;
+}
+
+.change .navbar-link:nth-child(1) {
+    margin: 0 3rem;
+    transition: opacity .4s .5s, color .3s;
+}
+
+.change .navbar-link:nth-child(2) {
+    transition: opacity .4s .6s, color .3s;
+}
+
+.change .navbar-link:nth-child(3) {
+    transition: opacity .4s .7s, color .3s;
+}
+
+.change .navbar-link:nth-child(4) {
+    transition: opacity .4s .8s, color .3s;
+}
+
+.change .navbar-link:nth-child(5) {
+    transition: opacity .4s .9s, color .3s;
+}
+
+.change .navbar-link:nth-child(6) {
+    transition: opacity .4s 1s, color .3s;
+}
+
+.navbar-link:hover {
+    color: #fff;
+}
+
+.navbar-link i {
+    font-size: 5rem;
+    background-color: #151515;
+    z-index: 110;
+}
+
+.navbar-link span {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: .5rem;
+    margin-top: .5rem;
+    background-color: #151515;
+}
+
+.menu {
+    width: 4rem;
+    height: 6rem;
+    background-color: #151515;
+    position: fixed;
+    top: 1rem;
+    left: 5rem;
+    border-radius: 30rem 30rem 15rem 15rem; 
+    box-shadow: .25rem .25rem .25rem #494949;
+    cursor: pointer;
+    z-index: 100;
+    transition: top 0.4s;
+}
+
+.menu.change {
+    top: 15rem;
+    transition: top .4s;
+}
+
+.menu::before {
+    content: "";
+    width: .3rem;
+    height: 15rem;
+    background-color: #151515;
+    position: absolute;
+    top: -15rem;
+    left: calc(50% - 0.15rem);
+}
+/* NAVBAR */
+
+/* GENRES */
+.genre-page-heading {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #ecebe4;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    text-shadow: .4rem .4rem .4rem #444;
+}
+.section-3 {
+    padding: 20vh 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+    margin-top: 10rem;
+}
+
+.gallery-link {
+    position: relative;
+}
+
+.gallery-link::before {
+    content: "";
+    position: absolute;
+    top: 2vw;
+    left: 90%;
+    width: .2rem;
+    height: 0;
+    background-color: #fff;
+    z-index: 10;
+    transition: height .5s;
+}
+
+.gallery-link::after {
+    content: "";
+    position: absolute;
+    top: 18.25%;
+    left: 1.25rem;
+    width: 0;
+    height: .2rem;
+    background-color: #fff;
+    transition: width .5s;
+}
+
+.gallery-link:hover::before {
+    height: 80%;
+}
+
+.gallery-link:hover::after {
+    width: 95%;
+}
+
+.book-name {
+    position: absolute;
+    margin: 0 auto;
+    top: 3.25rem;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+    background-color: transparent;
+}
+
+.book-name-xl {
+    position: absolute;
+    top: 3.3rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+    background-color: transparent;
+}
+
+.book-name-xxl {
+    position: absolute;
+    top: 3.55rem;
+    left: 1.35rem;
+    font-size: .935rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+    background-color: transparent;
+}
+
+.book-description {
+    position: absolute;
+    top: 7rem;
+    left: 1.3rem;
+    width: 80%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: .125rem;
+    color:#fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    background-color: transparent;
+}
+
+.gallery-link:hover .book-name, .gallery-link:hover .book-name-xl, .gallery-link:hover .book-name-xxl {
+    width: 100%;
+    transition: width 3s;
+}
+
+.gallery-link:hover .book-description {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s .5s;
+}
+
+.academic-img {
+    max-width: 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .1rem #000b2e,
+    .5rem .5rem .1rem #001e45,
+    .7rem .7rem .1rem #002d67,
+    .9rem .9rem .1rem #00567d;
+    transition: all .5s;
+}
+
+.gallery-link:hover .academic-img {
+    box-shadow: 1rem 1rem .1rem #000b2e,
+    2rem 2rem .1rem #001e45,
+    3rem 3rem .1rem #002d67,
+    4rem 4rem .1rem #00567d;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
+
+.fiction-img {
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .1rem #0f3225,
+    .5rem .5rem .1rem #113f21,
+    .7rem .7rem .1rem #295533,
+    .9rem .9rem .1rem #386641;
+    transition: all .5s;
+}
+
+.gallery-link:hover .fiction-img {
+    box-shadow: 1rem 1rem .1rem #0f3225,
+    2rem 2rem .1rem #113f21,
+    3rem 3rem .1rem #295533,
+    4rem 4rem .1rem #386641;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
+.non-fiction-img {
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .1rem #252525,
+    .5rem .5rem .1rem #353535,
+    .7rem .7rem .1rem #555,
+    .9rem .9rem .1rem #777;
+    transition: all .5s;
+}
+
+.gallery-link:hover .non-fiction-img {
+    box-shadow: 1rem 1rem .1rem #252525,
+    2rem 2rem .1rem #353535,
+    3rem 3rem .1rem #555,
+    4rem 4rem .1rem #777;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
+.novels-img {
+    max-width: 200px;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .1rem #280103,
+    .5rem .5rem .1rem #520000,
+    .7rem .7rem .1rem #4f0000,
+    .9rem .9rem .1rem #6a0303;
+    transition: all .5s;
+        
+}
+
+.gallery-link:hover .novels-img {
+    box-shadow: 1rem 1rem .1rem #280103,
+    2rem 2rem .1rem #520000,
+    3rem 3rem .1rem #4f0000,
+    4rem 4rem .1rem #6a0303;
+    filter: blur(.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
+/* GENRES */
+
+/* Responsive */
+@media (max-width: 1400px) {
+    html {
+    font-size: 50%;
+    }
+
+    .genre-page-heading {
+    position: relative;
+    left: 2.5%;
+    }
+
+    .gallery-link {
+    width: 20rem;
+    margin: 4rem;
+    margin-top: 8rem;
+    }
+
+    .novels-img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .fiction-img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .academic-img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .non-fiction-img {
+        width: 90%;
+        height: 90%;
+    }
+
+    .book-description {
+        font-size: 1.2rem;
+        top: 6rem;
+    }
+
+    .book-name {
+        top: 2.8rem;
+    }
+
+    .book-name-xl {
+        top: 2.95rem;
+    }
+
+    .book-name-xxl {
+        top: 3rem;
+    }
+
+    .gallery-link::before {
+        top: 2.65rem;
+    }
+
+    .gallery-link::after {
+        left: .9rem;
+    }
+}
+
+@media(max-width: 1200px) {
+    .genre-page-heading {
+        font-size: 7.5rem;
+    }
+}
+
+@media(max-width: 1000px) {
+    .genre-page-heading {
+    font-size: 7rem;
+    }
+
+    .gallery-link {
+    width: 20rem;
+    margin: 4rem;
+    margin-top: 6rem;
+    }
+}
+
+@media(max-width: 900px) {
+    .gallery-link {
+    margin-top: 5rem;
+    margin: 4rem;
+    }
+
+    .navbar-link {
+    margin: 1.75rem;
+    }
+
+    .navbar-link i {
+    font-size: 4rem;
+    }
+
+    .navbar-link span {
+    font-size: 1.75rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .gallery-link {
+    margin-top: 4rem;
+    margin: 10rem;
+    }
+
+    .menu {
+    left: 2rem;
+    }
+
+    .navbar-link {
+    margin: 0 1.2rem;
+    }
+
+    .navbar-link i {
+    font-size: 3.25rem;
+    }
+
+    .navbar-link span {
+    font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+    font-size: 50%;
+    }
+    .gallery-link {
+    margin: 8rem;
+    margin-top: 4rem;
+    }
+
+    .navbar-link {
+    margin: 0 .7rem;
+    }
+
+    .navbar-link i {
+    font-size: 2.85rem;
+    }
+
+    .navbar-link span {
+    font-size: 1rem;
+    letter-spacing: .3rem;
+    }
+    
+    .navbar-link #nf {
+    font-size: 1.25rem;
+    letter-spacing: .1rem;
+    padding-top: .35rem;
+    }
+}
+/* End of Responsive */

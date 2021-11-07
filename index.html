@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Books</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar target">
+        <a href="#top" class="navbar-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="genres/fiction.html" class="navbar-link">
+            <i class="fas fa-satellite-dish"></i>
+            <span>Fiction</span>
+        </a>
+        <a href="genres/non-fiction.html" class="navbar-link">
+            <i class="fas fa-microscope"></i>
+            <span id="nf">Non-Fiction</span>
+        </a>
+        <a href="genres/novels.html" class="navbar-link">
+            <i class="fas fa-heart"></i>
+            <span>Novels</span>
+        </a>
+        <a href="genres/academic.html" class="navbar-link">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Academic</span>
+        </a>
+        <a href="#bottom" class="navbar-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+        <div class="menu target"></div>
+    </nav>
+    <!-- NAVBAR -->
+
+    <div class="container">
+
+    <!-- FRONTPAGE -->
+    <section id="top" class="section-1">
+        <h1 class="section-heading-title">My Favorite Books</h1>
+        <div class="section-1-icons">
+            <i id="book-i" class="change fas fa-book"></i>
+            <i id="dragon-i" class="fas fa-dragon"></i>
+            <i id="heart-i" class="fas fa-heart"></i>
+            <i id="graduation-cap-i" class="fas fa-graduation-cap"></i>
+            <i id="microscope-i" class="fas fa-microscope"></i>
+            <i id="rocket-i" class="fas fa-rocket"></i>
+        </div>
+    </section>
+    <!-- FRONTPAGE -->
+
+    <!-- GENRE-FRONTPAGE -->
+    <section class="section-2">
+        <h1 class="section-heading-genres">Genres</h1>
+        <div class="cards-container">
+            <div class="card">
+                <img src="images/card-img-1.png" class="card-img">
+                <h3 class="card-name">Fiction</h3>
+                <button class="card-btn" onclick="document.location='genres/fiction.html'">Go</button>
+            </div>
+            <div class="card">
+                <img src="images/card-img-2.png" class="card-img">
+                <h3 class="card-name">Non-Fiction</h3>
+                <button class="card-btn" onclick="document.location='genres/non-fiction.html'">Go</button>
+            </div>
+            <div class="card">
+                <img src="images/card-img-3.png" class="card-img">
+                <h3 class="card-name">Novels</h3>
+                <button class="card-btn" onclick="document.location='genres/novels.html'">Go</button>
+            </div>
+            <div class="card">
+                <img src="images/card-img-4.png" class="card-img">
+                <h3 class="card-name">Academic</h3>
+                <button class="card-btn" onclick="document.location='genres/academic.html'">Go</button>
+            </div>
+        </div>
+    </section>
+    <!-- GENRE-FRONTPAGE -->
+
+    <!-- REQUESTS -->
+    <section id="bottom" class="section-4">
+        <div class="section-4-text">
+            <h2 class="section-4-heading">Contact me</h2>
+            <p class="section-4-paragraph">Recommendations? Introduce me to your favorites</p>
+        </div>
+        <form id="contact-click" class="signup-form">
+            <div class="signup-form-message">
+                <p id="form-message">Send me a message</p>
+            </div>
+            <a href="mailto:venegasdavidm@gmail.com" class="signup-form-btn">
+                <i id="btn-i" class="fas fa-arrow-right"></i>
+            </a>  
+        </form>
+        <p class="copyright">davyvegas &copy; All Rights Reserved</p>
+    </section>
+    <!-- REQUESTS -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
